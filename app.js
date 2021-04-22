@@ -72,7 +72,7 @@ Voice.on("voiceStateUpdate", async(oldState, newState) => {
     }
 });
 
-Voice.login(process.env.token).catch(err => {
+Voice.login("Token").catch(err => {
     Voice.error("Ses istemcisine bağlanırken bir hata oluştu: " + err.message);
     return Voice.destroy();
 });
